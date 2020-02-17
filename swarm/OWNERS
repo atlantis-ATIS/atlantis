@@ -1,0 +1,26 @@
+# Ownership by go packages
+
+swarm
+├── api ─────────────────── athersphere
+├── bmt ─────────────────── @zelig
+├── dev ─────────────────── @lmars
+├── fuse ────────────────── @jmozah, @holisticode
+├── grafana_dashboards ──── @nonsense
+├── metrics ─────────────── @nonsense, @holisticode
+├── multihash ───────────── @nolash
+├── network ─────────────── athersphere
+│   ├── bitvector ───────── @zelig, @janos, @gbalint
+│   ├── priorityqueue ───── @zelig, @janos, @gbalint
+│   ├── simulations ─────── @zelig
+│   └── stream ──────────── @janos, @zelig, @gbalint, @holisticode, @justelad
+│       ├── intervals ───── @janos
+│       └── testing ─────── @zelig
+├── pot ─────────────────── @zelig
+├── pss ─────────────────── @nolash, @zelig, @nonsense
+├── services ────────────── @zelig
+├── state ───────────────── @justelad
+├── storage ─────────────── athersphere
+│   ├── encryption ──────── @gbalint, @zelig, @nagydani
+│   ├── mock ────────────── @janos
+│   └── mru ─────────────── @nolash
+└── testutil ────────────── @lmars
