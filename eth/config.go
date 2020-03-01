@@ -58,16 +58,17 @@ var DefaultConfig = Config{
 }
 
 func init() {
-	home := os.Getenv("HOME")
-	if home == "" {
+	//home := os.Getenv("HOME")
+	home, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if home == "" || err != nil {
 		if user, err := user.Current(); err == nil {
 			home = user.HomeDir
 		}
 	}
 	if runtime.GOOS == "windows" {
-		DefaultConfig.Ethash.DatasetDir = filepath.Join(home, "AppData", "Ethash")
+		DefaultConfig.Ethash.DatasetDir = filepath.Join(home, "atlantisdata", "Ethash")
 	} else {
-		DefaultConfig.Ethash.DatasetDir = filepath.Join(home, ".athash")
+		DefaultConfig.Ethash.DatasetDir = filepath.Join(home, "atlantisdata",".ethash")
 	}
 }
 
