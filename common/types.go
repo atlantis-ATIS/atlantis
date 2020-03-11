@@ -190,7 +190,7 @@ func (a Address) Hex() string {
 			result[i] -= 32
 		}
 	}
-	return "0x" + string(result)
+	return "at" + string(result)
 }
 
 // String implements fmt.Stringer.
