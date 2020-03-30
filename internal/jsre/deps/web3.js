@@ -528,7 +528,7 @@ var SolidityType = require('./type');
  * address[][6][], ...
  */
 var SolidityTypeAddress = function () {
-    this._inputFormatter = f.formatInputInt;
+    this._inputFormatter = f.formatInputAddress;
     this._outputFormatter = f.formatOutputAddress;
 };
 
@@ -1125,6 +1125,7 @@ var formatOutputAddress = function (param) {
 
 module.exports = {
     formatInputInt: formatInputInt,
+	formatInputAddress: formatInputAddress,
     formatInputBytes: formatInputBytes,
     formatInputDynamicBytes: formatInputDynamicBytes,
     formatInputString: formatInputString,
