@@ -272,9 +272,9 @@ func (c *Config) resolvePath(path string) string {
 	}
 	// Backwards-compatibility: ensure that data directory files created
 	// by gath 1.4 are used if they exist.
-	if c.name() == "gath" && isOldGathResource[path] {
+	if c.name() == "atis" && isOldGathResource[path] {
 		oldpath := ""
-		if c.Name == "gath" {
+		if c.Name == "atis" {
 			oldpath = filepath.Join(c.DataDir, path)
 		}
 		if oldpath != "" && common.FileExist(oldpath) {

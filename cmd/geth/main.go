@@ -43,7 +43,7 @@ import (
 )
 
 const (
-	clientIdentifier = "gath" // Client identifier to advertise over the network
+	clientIdentifier = "atis" // Client identifier to advertise over the network
 )
 
 var (
